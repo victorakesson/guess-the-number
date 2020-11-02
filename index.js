@@ -1,1 +1,9 @@
-// Read instructions. And remove this line.
+function randomInt() {
+return [ 
+    Math.floor(Math.random() * 100),
+
+]
+    
+}
+
+console.log(randomInt())
