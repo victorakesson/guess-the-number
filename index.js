@@ -1,5 +1,5 @@
-function randomInt(n) {
-   return  Math.floor(Math.random() * n) + 1 
+function randomInt(n){
+   return Math.floor(Math.random() * n) + 1 
 }
 
 const secretNumber = randomInt(100)
@@ -13,17 +13,17 @@ function getUserGuess(){
 
 
 document.addEventListener("keyup", function (event) {
-    if (event.key === "enter") {
-        if (randomNumber === getUserGuess()){
+    if (event.key === "Enter") {
+        if (secretNumber=== getUserGuess()){
             setMessage("Well Done!")
-        } else if (randomNumber > getUserGuess()) {
+        } else if (secretNumber > getUserGuess()) {
             setMessage("Too low")
-        } else if (randomNumber < getUserGuess()) {
+        } else if (secretNumber < getUserGuess()) {
             setMessage("Too high")
         }
          document.getElementById("user-input").value = " "
-    
-}
+    }
+})
 
 function setMessage(msg){
     document.getElementById("message").innerText = msg
