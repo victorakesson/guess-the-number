@@ -21,11 +21,12 @@ document.addEventListener("keyup", function(event) {
         } else if (secretNumber < getUserGuess()) {
             setMessage("Too high")
         }
-         document.getElementById("user-input").value = ""
+        const guesses = []
+        guesses.push(getUserGuess())
+        console.log(guesses)
+        document.getElementById("user-input").value = ""
     }
-    const guesses = []
-    guesses.push(getUserGuess())
-    console.log(guesses)
+    
 
 })
 
