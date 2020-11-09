@@ -12,20 +12,33 @@ function getUserGuess(){
 
 
 
-document.addEventListener("keyup", function (event) {
+document.addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
-        if (secretNumber=== getUserGuess()){
+        if (secretNumber === getUserGuess()){
             setMessage("Well Done!")
         } else if (secretNumber > getUserGuess()) {
             setMessage("Too low")
         } else if (secretNumber < getUserGuess()) {
             setMessage("Too high")
         }
-         document.getElementById("user-input").value = " "
+         document.getElementById("user-input").value = ""
     }
+    const guesses = []
+    guesses.push(getUserGuess())
+    console.log(guesses)
+
 })
 
 function setMessage(msg){
     document.getElementById("message").innerText = msg
 }
+
+
+
+
+
+
+
+
+
 
